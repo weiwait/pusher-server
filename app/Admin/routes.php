@@ -16,4 +16,6 @@ Route::group([
 
     // Pusher App
     Route::resource('pusher-apps', PusherApplicationController::class);
+    // setting
+    Route::get('settings', [SettingController::class, 'index']);
 });

@@ -12,8 +12,7 @@ Route::group([
     'prefix'     => config('admin.route.prefix'),
     'middleware' => config('admin.route.middleware'),
 ], function (Router $router) {
-
-    $router->get('/', 'HomeController@index');
+    Route::get('/', [HomeController::class, 'index']);
 
     // Pusher App
     Route::resource('pusher-apps', PusherApplicationController::class);
